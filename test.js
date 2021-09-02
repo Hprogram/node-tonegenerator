@@ -1,14 +1,19 @@
-var assert = require('assert')
-var tonegenerator = require('./')
+var assert = require("assert");
+var tonegenerator = require("./");
 
-console.log('Testing Tonegenerator...')
+console.log("Testing Tonegenerator...");
 
+var tone1 = tonegenerator({ freq: 440, lengthInSecs: 2, volume: 10 });
+var tone2 = tonegenerator({ freq: 440, lengthInSecs: 2, volume: 30 });
+var tonefrequency = tonegenerator({
+  freq: 200,
+  lengthInSecs: 2,
+  volume: 10,
+  rate: 1000,
+});
 
-var tone1 = tonegenerator({ freq: 440, lengthInSecs: 2, volume: 10 })
-var tone2 = tonegenerator({ freq: 440, lengthInSecs: 2, volume: 30 })
-var tonefrequency = tonegenerator({ freq: 440, lengthInSecs: 2, volume: 10, rate: 22050 })
-
-
+console.log(tonefrequency);
+/*
 console.log('Testing Sine Waves')
 assert(Array.isArray(tone1), 'Data is an array')
 
@@ -84,3 +89,4 @@ assert.strictEqual(Math.max.apply(Math, tone9), 29)
 assert.equal(tone8.length/2, tonefrequency2.length, 'when halving audio sampling rate, the array length should be half of default')
 
 console.log('...done')
+*/

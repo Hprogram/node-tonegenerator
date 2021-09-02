@@ -25,5 +25,9 @@
     "semantic-release": "^4.3.5"
   },
   "main": "./index.js",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "tonegenerator": "^0.3.2",
+    "waveheader": "^0.0.2"
+  }
 }
